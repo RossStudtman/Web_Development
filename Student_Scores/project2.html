@@ -1,0 +1,74 @@
+<!--
+	Ross Studtman
+	CIS 131 - Web Dev 2
+	Project 2: Student Scores
+	Shane May
+	10/18/2012
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>CIS131 Project 2: Student Scores</title>
+	<link rel="stylesheet" type="text/css"  href="project2.css" />
+</head>
+<body>
+<div id="wrapper">
+
+	<div id="top">
+		<div id="title">
+			<h1>Student Scores</h1>
+		</div>
+		<form id="nameScoreForm" action="">
+		<div>
+			<label>First Name:
+				<input id="fName" type="text" />
+			</label>
+			<label>Last Name:
+				<input id="lName" type="text" />
+			</label>
+			<label>Score:
+				<input id="score" type="text" />
+			</label>
+			<label>
+				<input id="addStudent" type="button" value="Add Student Score" />
+			</label>
+		</div>
+		</form>
+	</div>
+	
+	<div id="middle">
+		<h2>Student Scores</h2>
+		<div class="horizontalRule"></div>
+		<textarea id="studentOutput" cols="50" rows="5" disabled="disabled"></textarea>
+	</div>
+	
+	<div id="bottom">
+		<div id="displayResults">
+			<p>
+				<span>Average Score:</span>
+				<input id="average" type="text" disabled="disabled" />		
+			</p>
+			<p>
+				<span>Standard Deviation:</span>
+				<input id="standardDeviation" type="text" disabled="disabled" />		
+			</p>
+			<p>
+				<span>Variance:</span>
+				<input id="variance" type="text" disabled="disabled" />		
+			</p>		
+		</div>
+		<div id="mutatorButtons">
+			<p>
+				<button id="clearStudents">Clear Student Scores</button>
+			</p>
+			<p>
+				<button id="sort">Sort By Last Name</button>
+			</p>		
+		</div>		
+	</div>
+</div>
+<script type="text/javascript" src="project2.js"></script>
+</body>
+</html>

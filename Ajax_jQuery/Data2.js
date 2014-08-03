@@ -1,0 +1,1 @@
+ajaxFunction("Data2.txt");

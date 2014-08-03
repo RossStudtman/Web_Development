@@ -1,0 +1,11 @@
+{
+	"position1" : "Pitcher",
+    "position2" : "Catcher",
+	"position3" : "First Base",
+    "position4" : "Second Base",
+    "position5" : "Third Base",
+    "position6" : "ShortStop",
+    "position7" : "Left Field",
+    "position8" : "Center Field",
+    "position9" : "Right Field"
+}

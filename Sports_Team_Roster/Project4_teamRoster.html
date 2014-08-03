@@ -1,0 +1,61 @@
+<!--
+	Ross Studtman
+	CIS 131 - Web Dev 2
+	Project 4: Baseball Team Roster
+	Shane May
+	12/06/2012
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Project 4: Baseball Team Roster</title>
+	<link rel="stylesheet" type="text/css"  href="project4_teamRoster.css" />
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="project4_teamRoster.js"></script>	
+</head>
+<body>
+<div id="wrapper">
+
+	<h2>Sport:</h2>
+	<div id="sportButtons">
+		<button type="button" id="baseball">Baseball</button>
+		<button type="button" id="basketball">Basketball</button>
+		<button type="button" id="football">Football</button>	
+		<p>default selection: baseball</p>
+	</div>
+		
+	<h1>Team Roster</h1>		
+
+	<form id="rosterForm" action="">			
+		<label>Team name:
+			<input id="teamName" type="text" name="teamName" /></label>
+		
+			<button id="setTeamName" type="button">Set</button>			
+		
+		<div id="footballButtons">
+			<button class="hiddenFootball" type="button" id="footballOL">Offensive Line</button>
+			<button class="hiddenFootball" type="button" id="footballDL">Defensive Line</button>
+		</div>
+	
+		<label>Add Member:
+			<input id="playerName" type="text" name="playerName" /></label>	
+				
+		<select id="positionSelect" class="hide"  name="playerPosition"></select>
+		
+		<button id="addPlayer" class="hide" type="button" >Add</button>	
+		
+		<span id="revealMessage"></span>
+
+		<button id="reset" type="button" >Reset</button>
+	</form>
+	
+	<div class="horizontalRule"></div>
+	
+	<div id="lower">
+		<h3 id="displayTeamName"></h3>
+		<ul id="displayPlayerPosition"></ul>
+	</div>
+</div>
+</body>
+</html>

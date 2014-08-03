@@ -1,0 +1,48 @@
+/*
+	Ross Studtman
+	CIS 131
+	Project 1: Change Calculator
+	Shane May
+	9/19/2012
+*/
+
+/* style div that holds all other divs */
+#wrapper{
+	position: relative;
+	margin: 0 auto;
+	width: 600px;
+	border-width: 10px 20px;
+	border-style: solid;
+	border-color: #555;
+	padding: 20px;
+	text-align: center;
+}
+
+/* keeps floated #output inputs with text */
+#wrapper div{
+	display: inline-block;
+}
+
+/* create a little space between label and textbox */
+input{
+	margin-left: 5px;
+}
+
+/* give button a little more breathing room on left */
+#calculate{
+	margin-left: 5px;
+}
+
+/* align text boxes */
+#output input{
+	float: right;
+	background-color: #EEE;
+}
+
+/* move #input to line up with #output */
+#input{
+	position: relative;
+	left: -22px;
+	margin-bottom: 50px;
+}
+

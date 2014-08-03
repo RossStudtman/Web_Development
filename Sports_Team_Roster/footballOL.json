@@ -1,0 +1,13 @@
+{
+	"position1" : "Quarterback",
+    "position2" : "Halfback",
+	"position3" : "Fullback",
+    "position4" : "Left Receiver",
+    "position5" : "Left Tackle",
+    "position6" : "Left Guard",
+    "position7" : "Center",
+    "position8" : "Right Guard",
+    "position9" : "Right Tackle",
+	"position10" : "Tight End",
+	"position11" : "Right Receiver"
+}

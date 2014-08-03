@@ -1,0 +1,132 @@
+/*
+	Ross Studtman
+	CIS 131 - Web Dev 2
+	Project 2: Student Scores
+	Shane May
+	10/18/2012
+*/
+
+/* ******************** */
+/* Global changes       */
+/* ******************** */
+
+/* alterations to body element: defaults */
+body{
+	margin: 0em;
+	/* 
+		Most browser default font-size = 16px.
+		If we set font-size to 62.5% of 16px --> 10px. 
+		Now 1em = 10px.
+		This makes em to pixels very easy to understand:
+		
+			1.2em = 12px; 
+			1.6em = 16px; 
+			2.4em = 24px; 
+			etc.
+	*/
+	font-size: 62.5%; /* font-size 1em = 10px */
+	font-family: arial, sans-serif;
+}
+
+/* style div that holds all other divs */
+#wrapper{
+	font-size: 1.6em;
+	position: relative;
+	margin: 1.0em auto;
+	width: 460px;
+	border-width: 0.6em 0.6em 0.8em 0.6em;
+	border-style: solid;
+	border-color: #555;
+	padding: 0.5em 1.0em;
+}
+
+/* set margins for <h1> and <h2> elements */
+h1{
+	margin: 0.2em 0.0em 0.5em 0.0em;
+}
+h2{
+	margin-top: 0.5em;
+}
+
+/* style all labels to display inline-block: gets rid of <br/> */
+#wrapper label{
+	display: block;
+	margin: 0.4em;
+}
+
+/* ******************** */
+/* TOP DIV		        */
+/* ******************** */
+
+/* nudge form toward center - but not quite center */
+#nameScoreForm{
+	position: relative;
+	/*left: 5em;*/
+	text-align: right;
+	left: -10em;
+}
+
+/* give text inputs with focus a signifying background color */
+#wrapper input[type=text]:focus{
+	background-color: #FFA;
+}
+
+/* nudge "Add Student Score" button left */
+#addStudent{
+	position: relative;
+	left: -0.45em;
+}
+
+/* ******************** */
+/* MIDDLE DIV           */
+/* ******************** */
+
+/* give middle div some breathing room */
+#middle{
+	margin: 2.0em 0.0em;
+}
+
+/* style horizontal rule */
+.horizontalRule{
+	height: 0.1em;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #555;
+}
+
+/* style textarea for student output results */
+#studentOutput{
+	margin-top: 1.0em;
+	
+	/* HTML validation at W3C had issue with doing the following in css.
+		Although, it would seem a presentation issue, not structural. 
+		Additionally: this method scales with the webpage size.
+	*/
+		
+	/*width: 100%;*/	/* css substitute for HTML attribute "cols='number'" */
+	/*height: 8em;*/	/* css substitute for HTML attribute "rows='number'" */
+}
+
+/* ******************** */
+/* BOTTOM DIV           */
+/* ******************** */
+
+/* adjust default margin for paragraphs containing spans/inputs/buttons */
+#bottom div p{
+	margin: 0.4em;
+}
+
+/* visually center input elements, align "labels" (spans, in this case) right */
+#displayResults{
+	text-align: right;
+	position: relative;
+	left: -8em;
+}
+
+/* visually center buttons */
+#mutatorButtons{
+	margin: 1em;
+	position: relative;
+	left: 10.0em;
+}
+

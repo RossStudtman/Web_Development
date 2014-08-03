@@ -1,0 +1,152 @@
+/*
+	Ross Studtman
+	CIS 131 - Web Dev 2
+	Project 3: Monthly Balance Calculator
+	Shane May
+	11/08/2012
+*/
+
+/* ******************** */
+/* Global changes       */
+/* ******************** */
+
+/* alterations to body defaults */
+body{
+	margin: 0em;
+	/* 
+		Most browser default font-size = 16px.
+		If we set font-size to 62.5% of 16px --> 10px. 
+		Now 1em = 10px.
+		This makes em to pixels very easy to understand:
+		
+			1.2em = 12px; 
+			1.6em = 16px; 
+			2.4em = 24px; 
+			etc.
+	*/
+	font-size: 62.5%; /* font-size 1em = 10px */
+	font-family: arial, sans-serif;
+}
+
+/* style the div that holds all other elements */
+#wrapper{
+	font-size: 1.6em;
+	position: relative;
+	margin: 1.0em auto;
+	width: 460px;
+	border-width: 0.6em 0.6em 0.8em 0.6em;
+	border-style: solid;
+	border-color: #555;
+	padding: 0.5em 1.0em 2.0em 1.0em;
+	/* ensure wrapper's border covers floated divs at the bottom */
+	overflow: hidden; 
+}
+
+/* decrease bottom margin on h2 elements */
+h2{
+	margin-bottom: -0.3em;
+}
+
+/* give text inputs with focus a signifying background color */
+input:focus{
+	background-color: #FFA;
+}
+
+/* style all labels to display inline-block: gets rid of <br/> */
+#wrapper label{
+	display: block;
+	margin: 0.4em;
+}
+
+
+/* style horizontal rules on the page */
+.horizontalRule{
+	height: 0.2em;
+	width: 100%;
+	margin: 0.5em auto;
+	background-color: #555;
+}
+
+/* 	center content in divs: Step 1: float outer div left, 
+	then push 50% to the right. */
+ .centeringDiv1 {
+   position: relative; 
+   float: left;
+   left: 50%;		
+ }
+ 
+ /* center content in divs: Step 2: push inner div 50% to the left. */
+ .centeringDiv2{
+	position: relative;
+	left: -50%;	
+ }
+ 
+/* **************************** */
+/* project3_login.html specific */
+/* **************************** */ 
+
+/* center project3_login.html labels */
+#loginForm label{
+	position: relative;
+	left: -10em;
+	text-align: right;
+}
+
+/* select the only <p> tag in the form */
+#loginForm p:only-of-type{
+	text-align: right;
+}
+
+
+/* ******************** */
+/* Add Transaction Form */
+/* ******************** */
+
+/* make inputs line up attractively */
+#transactionForm{
+	text-align: right;	
+}
+
+/* set width of select element */
+#transactionType{
+	width: 10.6em;
+	padding-left: 2.0em;
+}
+
+/* ******************** */
+/* Display Transactions */
+/* ******************** */
+
+/* stop the Transaction Display from drifing up */
+#showTransactions{
+	clear: both;
+	/* increase space between this div and the one above */
+	padding-top: 0.2em; /* note: margin-top won't work with floated divs above */
+}
+
+/* ******************** */
+/* Summary Display      */
+/* ******************** */
+
+/* use centering divs: see above */
+/* align paragraphs attractively inside centering div */
+.centeringDiv2 p{
+	position: relative;
+	text-align: right;
+	/* nudge paragraphs left */
+	left: -4em;
+	/* decrease space between paragraphs */
+	margin: 0.5em;
+}
+
+#summaryDisplay input{
+	direction: rtl;
+}
+
+
+
+
+
+
+
+

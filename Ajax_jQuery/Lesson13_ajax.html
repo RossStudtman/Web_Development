@@ -1,0 +1,116 @@
+<!--
+	Ross Studtman
+	CIS 131 - Web Dev 2
+	Lesson 13: AJAX ...improved lesson version.
+	Shane May
+	12/06/2012
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Lesson 13: AJAX</title>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="myJquery.js"></script>
+</head>
+<body>
+	<h3>EXERCISE 12-1</h3>
+	<hr />
+	<h2>AJAX Button Clicker</h2>
+	<p>
+		This script shows how to use multiple external scripts that load dynamically when you click a button.</p>
+		
+	<input type="button" value="Button 1"  />
+	<input type="button" value="Button 2"  />
+	<input type="button" value="Button 3"  />
+	<p>
+		<div id="ajaxDisplay">
+			&nbsp;
+		</div>
+	</p>
+	<p>
+		Worthy note: jQuery inserts a &ltscript&gt element, runs it, then removes it, 
+		so you won't see it in the DOM. See this stackoverflow post for a work
+		around if you need the script to stick around for some reason. The  2nd 
+		answer is the one with the most votes:
+			<p>
+			<a href="http://stackoverflow.com/questions/610995/jquery-cant-append-script-element">
+			http://stackoverflow.com/questions/610995/jquery-cant-append-script-element</a></p>			
+	</p>
+	<hr />
+	
+	<h1>Notes:</h1>
+	
+	<h2>What is going on here?</h2>
+	<p>The lesson is trying to teach us: 
+		<ul>
+			<li>how to add javascript from other files into our HTML page.</li>
+			<li>how to use jQuery to simplify getting data from a server</li>
+			<li>how to dynamically update a portion of the HTML via information from server</li>
+		
+		</ul>
+	</p>
+	<h3>First, here are the files being used:</h3>
+	<ul>
+		<li>You have the following javascript files:
+			<ul>
+				<li>"myJquery.js"
+					<ul>
+						<li>$('input').click(function()
+							<ul>
+								<li>--> Depending on the button clicked ads a &lt;script&gt; element that "imports" a javascript file into this HTML page.</li>
+							</ul>
+						</li>						
+						<li>function ajaxFunction(URL_of_file)
+							<ul>
+								<li>--> uses $('#ajaxDisplay').load(URL_of_file) to A) make a server call, B) assign the returned data to the "ajaxDisplay" div.</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+					
+				<li>"Data1.js"
+					<ul>No functions. Does one thing:
+						<li>--> makes a function call: ajaxFunction("baseball.json");</li>
+					</ul>
+				</li>
+				<li>"Data2.js"
+					<ul>No functions. Does one thing:
+						<li>--> makes a function call: ajaxFunction("Data2.txt");</li>
+					</ul>
+				</li>
+				<li>"Data3.js"
+					<ul>No functions. Does one thing:
+						<li>--> makes a function call: ajaxFunction("Data3.txt");</li>
+					</ul>				
+				</li>
+			</ul>		
+		</li>
+		<li>And you have the following text files:
+			<ul>
+				<li>"baseball.json"</li>
+				<li>"Data2.txt"</li>
+				<li>"Data3.txt"</li>
+			</ul>
+		</li>
+		<li>And you're currently viewing: Lesson13_ajax.html
+			<ul>No javascript in this file.
+				<li>Script imports are:
+					<ul>
+						<li>src="jquery-1.8.3.min.js"</li>
+						<li>src="myJquery.js"</li>
+					</ul>
+				</li>
+			</ul>
+		</li>	
+	</ul>
+	<h3>Second, here is what is going on:</h3>
+	<ol>
+		<li>click a button --> invokes handler function in myJquery.js --> javascript file added to the HTML file.</li>
+		<li>js compiler reads the added javascript file</li>
+		<li>added javascript file invokes myJquery's ajaxFunction(with string argument that is the name of a .txt or .json file)</li>
+		<li>the ajaxFunction adds the returned data from the "server" (the .json or .txt file) into the div with the id of "ajaxDisplay"</li>
+		<li>The End.</li>		
+	</ol>
+</body>
+</html>

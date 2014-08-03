@@ -1,0 +1,105 @@
+<!--
+	Ross Studtman
+	CIS 131 - Web Dev 2
+	Lesson 9 exercises: 8-4, 8-4a.
+	Shane May
+	11/1/2012
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Lesson 9: Password Verification Page</title>
+	<link rel="stylesheet" type="text/css"  href="lesson9.css" />
+</head>
+<body>
+	<h3>EXERCISE 8-4</h3>
+	<strong>Please enter your password</strong>
+	
+	<form id="exercise8_4form" action="">
+		(look at the notes in the .js file **THIS** is a TextNode element)
+		(If I don't write words here this TextNode element STILL exists!
+		...but is empty, appears invisible on the page, but it's there!)
+		<p>
+			<input type="text" id="lessonPassword" name="lessonPassword" />
+			...the lesson's input, a type=text input. (Password validation looks for "hello").
+		</p>
+		<p>
+			<input type="password" id="realPassword" name="realPassword" />
+			...extra learning, add a real password input, a type=password input.
+		</p>
+		<p>
+			<input type="button" id="theButton" value="Submit" /> 
+			<input type="Reset" />
+		</p>
+		<p>
+			Note: the "Submit" button is of type "button", not "submit".
+		</p>
+		
+		<!-- These added to form for testing. Notes found in lesson9_cookies.js's "learnStuff" function	-->
+		<input type="radio" name="sex" value="male">Male</input>
+		<input type="radio" name="sex" value="female">Female</input>
+		<input type="checkbox" name="candy" value="twix">twix</input>
+		<input type="checkbox" name="candy" value="health">heath</input>
+		<select name="cars">
+			<option value="mini">Mini</option>
+			<option value="fiat">Fiat</option>
+			<option value="jag">Jag</option>
+		</select>
+		<p>paragraph 5</p>
+		<p>paragraph 6</p>
+	</form>
+	
+	<h1>The form has a click listener attached to it: be sure to have the console open when clicking the form!</h1>
+	<p>Click the form and observe the console.</p>
+	<p>There are a lot of notes inside lesson9_cookies.js's "learnStuff" function.</p>
+	
+	<h1>Learning Form Stuff from <a href="http://www.w3.org/TR/html51/forms.html#introduction-1">w3.org</a> -- a really great source!</h1>
+	<h2>This is not part of the above form!</h2>
+	
+	<p>
+		<label>Full name: 
+			<input name=fn> <small>Format: First Last</small>
+		</label>
+	</p>
+	<p>
+		<label>Age: 
+			<input name=age type=number min=0>
+		</label>
+	</p>
+	<p>
+		<label>Post code: 
+			<input name=pc title="this is a title attribute"> <small>Format: AB12 3CD</small>
+		</label>
+	</p>
+	
+	
+	<h3>Learning some "Validity" from the above w3 source:</h3>
+	
+	<label>Feeling: 
+		<input name=f type="text" oninput="check(this)">
+	</label>
+	
+	<h3>Probably a better resource for learning HTML5 form validation: </h3>
+	<p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation">
+	https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Data_form_validation</a></p>
+	<script>
+	 function check(input) {
+	 
+	   if (input.value == "good" || input.value == "fine" || input.value == "tired") {
+	   
+		 input.setCustomValidity('"' + input.value + '" is not a feeling.');
+		 
+	   } else {
+	   
+		 // input is fine -- reset the error message
+		 input.setCustomValidity('');
+	   }
+	 }
+	</script>
+
+
+<script type="text/javascript" src="lesson9_cookies.js"></script>
+</body>
+</html>

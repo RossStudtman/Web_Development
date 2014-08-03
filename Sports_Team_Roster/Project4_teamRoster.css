@@ -1,0 +1,121 @@
+/*
+	Ross Studtman
+	CIS 131 - Web Dev 2
+	Project 4: Baseball Team Roster
+	Shane May
+	12/06/2012
+*/
+
+/* ******************** */
+/* Global changes       */
+/* ******************** */
+
+/* alterations to body defaults */
+body{
+	margin: 0em;
+	/* 
+		Most browser default font-size = 16px.
+		If we set font-size to 62.5% of 16px --> 10px. 
+		Now 1em = 10px.
+		This makes em to pixels very easy to understand:
+		
+			1.2em = 12px; 
+			1.6em = 16px; 
+			2.4em = 24px; 
+			etc.
+	*/
+	font-size: 62.5%; /* font-size 1em = 10px */
+	font-family: arial, sans-serif;
+}
+
+/* style the div that holds all other elements */
+#wrapper{
+	font-size: 1.6em;
+	position: relative;
+	margin: 1.0em auto;
+	width: 460px;
+	border-width: 0.6em 0.6em 0.8em 0.6em;
+	border-style: solid;
+	border-color: #555;
+	padding: 0.5em 1.0em 2.0em 1.0em;
+}
+
+/* style horizontal rules on the page */
+.horizontalRule{
+	height: 0.2em;
+	width: 100%;
+	margin: 0.5em auto;
+	background-color: #555;
+}
+
+/* center h1 and h2 */
+h1, h2{
+	text-align: center;
+}
+
+/*  ########################## 	*/
+/*	Sports Buttons 				*/
+/*  ########################## 	*/
+
+/* Decrease margin below "Sport" */
+h2:first-child{
+	margin-bottom: 0.1em;
+}
+
+#sportButtons{
+	text-align: center;
+}
+
+/* make font below sport buttons smaller */
+#sportButtons p{
+	font-size: 0.75em;	
+}
+
+
+/*  ########################## 	*/
+/*	Input Form					*/
+/*  ########################## 	*/
+
+/* the <span> message that shows when team positions options in <select> are gone */
+.revealMessage{
+	margin-left: 1em;
+	padding: 0.5em;
+	background-color: red;
+	font-weight: bold;	
+}
+
+/* Position hidden football buttons */
+#footballButtons{
+	text-align: right;
+	position: relative;
+	top: 0.5em;
+	min-height: 3em;
+}
+
+/* default css of footballOL and footballDL buttons */
+.hiddenFootball{
+	display: none;
+}
+
+#reset{
+	margin-top: 1.0em;
+	display: block;
+}
+
+/*  ########################## 	*/
+/*	Results display				*/
+/*  ########################## 	*/
+
+/* minimum height of lower half of page */
+#lower{
+	min-height: 10em;
+}
+
+
+
+
+
+
+
+
+
